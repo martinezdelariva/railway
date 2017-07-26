@@ -1,0 +1,14 @@
+{
+    "require": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "Rw\\": "src",
+        "Martinezdelariva\\": "src"
+      },
+      "files": [
+        "src/Railway/functions.php"
+      ]
+    }
+}
