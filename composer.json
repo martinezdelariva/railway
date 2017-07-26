@@ -1,14 +1,30 @@
 {
-    "require": {
-        "phpunit/phpunit": "^6.0"
-    },
-    "autoload": {
-      "psr-4": {
-        "Rw\\": "src",
-        "Martinezdelariva\\": "src"
-      },
-      "files": [
-        "src/Railway/functions.php"
-      ]
+  "name": "martinezdelariva/railway",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "José Luis Martínez de la Riva",
+      "email": "martinezdelariva@gmail.com",
+      "homepage": "http://martinezdelariva.com"
     }
+  ],
+  "require": {
+    "phpunit/phpunit": "^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Martinezdelariva\\": "src"
+    },
+    "files": [
+      "src/Railway/functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Martinezdelariva\\Test\\": "test"
+    }
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit"
+  }
 }
