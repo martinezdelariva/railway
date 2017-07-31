@@ -13,7 +13,8 @@ namespace Martinezdelariva\Railway;
 use Martinezdelariva\Railway\Either\Right;
 
 /**
- * On track 1-1 to switch 1-2.
+ * Converts one track function into switch.
+ * 1-1 : 1-2
  */
 class Lift
 {

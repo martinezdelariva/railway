@@ -14,7 +14,8 @@ use Martinezdelariva\Railway\Either\Left;
 use Martinezdelariva\Railway\Either\Right;
 
 /**
- * Combining switch functions in parallel, 1-2 and 1-2 into switch 1-2
+ * Combines switch functions in parallel.
+ * 1-2 + 1-2 : 1-2
  */
 class Plus
 {

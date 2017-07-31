@@ -14,7 +14,8 @@ use Martinezdelariva\Railway\Either\Left;
 use Martinezdelariva\Railway\Either\Right;
 
 /**
- * Handles both tracks. Convert one track 1-1 to 2-2
+ * Handles both tracks, converting one track into two track function.
+ * 1-1 : 2-2
  */
 class DoubleMap
 {

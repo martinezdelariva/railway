@@ -14,7 +14,8 @@ use Martinezdelariva\Railway\Either\Either;
 use Martinezdelariva\Railway\Either\Right;
 
 /**
- * One track 1-1 function into 2-2 function
+ * Converts one track function into two track function.
+ * 1-1 : 2-2
  */
 class Map
 {

@@ -13,7 +13,8 @@ namespace Martinezdelariva\Railway;
 use Martinezdelariva\Railway\Either\Either;
 
 /**
- * Converts switch 1-2 to 2-2
+ * Converts switch into two track function
+ * 1-2 : 2-2
  */
 class Bind
 {

@@ -15,7 +15,8 @@ use Martinezdelariva\Railway\Either\Right;
 use Throwable;
 
 /**
- * Handling exceptions. Convert one track 1-1 into  switch 1-2
+ * Handling exceptions. Convert one track into switch.
+ * 1-1 : 1-2
  */
 class TryCatch
 {

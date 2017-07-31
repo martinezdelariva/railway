@@ -13,7 +13,8 @@ namespace Martinezdelariva\Railway;
 use Martinezdelariva\Railway\Either\Either;
 
 /**
- * Join two switches 1-2 and 1-2 into another switch 1-2
+ * Join two switches into another switch
+ * 1-2 and 1-2 : 1-2
  */
 class Unite
 {
