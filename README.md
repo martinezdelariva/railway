@@ -4,6 +4,13 @@
 
 This library is based on a post from (Scott Wlaschin)[https://fsharpforfunandprofit.com/posts/recipe-part2/] in order to bring Railway Oriented Programming to PHP.
 
+## Installation
+
+Install it using [Composer](https://getcomposer.org/)
+
+
+    composer require martinezdelariva/railway 
+
 ## Motivation
 
 Typically every use case receives a request and produces a response. The use case passes for several steps until gets the final response to be returned. Handle every error scenario could be tedious and difficult to read. 
