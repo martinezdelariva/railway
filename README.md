@@ -1,5 +1,7 @@
 # Railway
 
+[![Build Status](https://travis-ci.org/martinezdelariva/railway.svg?branch=master)](https://travis-ci.org/martinezdelariva/railway)
+
 This library is based on a post from (Scott Wlaschin)[https://fsharpforfunandprofit.com/posts/recipe-part2/] in order to bring Railway Oriented Programming to PHP.
 
 ## Motivation
