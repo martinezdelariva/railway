@@ -8,6 +8,11 @@
       "homepage": "http://martinezdelariva.com"
     }
   ],
+  "keywords": [
+      "functional",
+      "railway",
+      "railway oriented programming"
+  ],
   "require-dev": {
     "phpunit/phpunit": "^6.3"
   },
