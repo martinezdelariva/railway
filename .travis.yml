@@ -1,0 +1,13 @@
+language: php
+php:
+  - '7.1'
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+before_script:
+  - php composer.phar install
+
+script:
+  - php composer.phar test
