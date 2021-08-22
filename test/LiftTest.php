@@ -8,14 +8,13 @@
 
 declare(strict_types=1);
 
-namespace Martinezdelariv\Test\Railway;
+namespace Martinezdelariva\Railway\Test;
 
-use function Martinezdelariva\Railway\map;
-use Martinezdelariva\Railway\Either\Left;
+use function Martinezdelariva\Railway\lift;
 use Martinezdelariva\Railway\Either\Right;
 use PHPUnit\Framework\TestCase;
 
-class MapTest extends TestCase
+class LiftTest extends TestCase
 {
     /**
      * @var \Closure
@@ -29,19 +28,11 @@ class MapTest extends TestCase
         };
     }
 
-    public function test_right_track()
+    public function test_return_right()
     {
         $this->assertEquals(
             Right::of(2),
-            map($this->increment)(Right::of(1))
-        );
-    }
-
-    public function test_left_track()
-    {
-        $this->assertEquals(
-            Left::of('error'),
-            map($this->increment)(Left::of('error'))
+            lift($this->increment)(1)
         );
     }
 }
