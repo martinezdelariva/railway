@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-namespace Martinezdelariv\Test\Railway;
+namespace Martinezdelariva\Railway\Test;
 
 use function Martinezdelariva\Railway\plus;
 use Martinezdelariva\Railway\Either\Left;

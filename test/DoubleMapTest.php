@@ -8,14 +8,14 @@
 
 declare(strict_types=1);
 
-namespace Martinezdelariv\Test\Railway;
+namespace Martinezdelariva\Railway\Test;
 
-use function Martinezdelariva\Railway\tryCatch;
+use function Martinezdelariva\Railway\doubleMap;
 use Martinezdelariva\Railway\Either\Left;
 use Martinezdelariva\Railway\Either\Right;
 use PHPUnit\Framework\TestCase;
 
-class TryCatchTest extends TestCase
+class DoubleMapTest extends TestCase
 {
     /**
      * @var \Closure
@@ -25,7 +25,7 @@ class TryCatchTest extends TestCase
     /**
      * @var \Closure
      */
-    private $exception;
+    private $decrement;
 
     public function setUp()
     {
@@ -33,8 +33,8 @@ class TryCatchTest extends TestCase
             return $int + 1;
         };
 
-        $this->exception = function (\Exception $exception) {
-            throw $exception;
+        $this->decrement = function ($int) {
+            return $int - 1;
         };
     }
 
@@ -42,17 +42,15 @@ class TryCatchTest extends TestCase
     {
         $this->assertEquals(
             Right::of(2),
-            tryCatch($this->increment)(1)
+            doubleMap($this->increment, $this->decrement)(Right::of(1))
         );
     }
 
     public function test_left_track()
     {
-        $exception = new \Exception('Testing left track');
-
         $this->assertEquals(
-            Left::of(new \Exception('Testing left track')),
-            tryCatch($this->exception)($exception)
+            Left::of(0),
+            doubleMap($this->increment, $this->decrement)(Left::of(1))
         );
     }
 }

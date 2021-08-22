@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-namespace Railway;
+namespace Martinezdelariva\Railway\Test;
 
 use function Martinezdelariva\Railway\unite;
 use Martinezdelariva\Railway\Either\Left;

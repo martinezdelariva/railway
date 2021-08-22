@@ -8,13 +8,14 @@
 
 declare(strict_types=1);
 
-namespace Martinezdelariv\Test\Railway;
+namespace Martinezdelariva\Railway\Test;
 
-use function Martinezdelariva\Railway\lift;
+use function Martinezdelariva\Railway\bind;
 use Martinezdelariva\Railway\Either\Right;
+use Martinezdelariva\Railway\Either\Left;
 use PHPUnit\Framework\TestCase;
 
-class LiftTest extends TestCase
+class BindTest extends TestCase
 {
     /**
      * @var \Closure
@@ -24,15 +25,23 @@ class LiftTest extends TestCase
     public function setUp()
     {
         $this->increment = function ($int) {
-            return $int + 1;
+            return Right::of($int + 1);
         };
     }
 
-    public function test_return_right()
+    public function test_right_track()
     {
         $this->assertEquals(
             Right::of(2),
-            lift($this->increment)(1)
+            bind($this->increment)(Right::of(1))
+        );
+    }
+
+    public function test_left_track()
+    {
+        $this->assertEquals(
+            Left::of('error'),
+            bind($this->increment)(Left::of('error'))
         );
     }
 }
